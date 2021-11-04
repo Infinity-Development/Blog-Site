@@ -71,7 +71,7 @@ app.get('/', async (req, res) => {
   res.render('articles/index', {
     articles: articles,
     currentUser: req.user,
-    title: 'Latest Blogs',
+    title: 'Latest Blog Posts',
   });
 });
 
