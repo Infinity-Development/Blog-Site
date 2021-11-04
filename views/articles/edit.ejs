@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4 mb-4">Edit <%= article.title %></h1>
+<h1 class="text-center mt-4 mb-4" style="color: white;">Edit <%= article.title %></h1>
 <form action="/articles/<%= article.id %>?_method=PUT" method="POST">
   <%- include('_form_fields') %>
 </form>
