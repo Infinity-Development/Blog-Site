@@ -1,7 +1,7 @@
 {
-  "name": "blogapp",
+  "name": "blog.botlist.app",
   "version": "1.0.0",
-  "description": "Simple nodejs blog site",
+  "description": "Infinity Blog Site",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
