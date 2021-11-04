@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  isIBLStaff: {
+    type: Boolean,
+    default: false,
+  },
   confirmationCode: String,
   resetToken: String,
   resetTokenExpire: Date,
