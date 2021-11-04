@@ -24,16 +24,16 @@
 </form>
 <% } %>
 
-<p class="user mt-3">
+<p class="user mt-3" style="color: white;">
   <i class="fas fa-user-circle mr-1"></i> <%= article.author.username %>
 </p>
-<h1 class="article-title mt-1"><%= article.title %></h1>
-<p class="read-time"></p>
-<div class="mb-2">
+<h1 class="article-title mt-1" style="color: white;"><%= article.title %></h1>
+<p class="read-time" style="color: white;"></p>
+<div class="mb-2" style="color: white;">
   <i class="far fa-calendar-alt mr-2"></i><%=
   article.createdAt.toLocaleDateString()%>
 </div>
-<div class="mt-3 mb-3 article-body">
+<div class="mt-3 mb-3 article-body" style="color: white;">
   <%- article.sanitizedHtml %>
 </div>
 
