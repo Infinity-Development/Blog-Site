@@ -21,7 +21,7 @@ router.get('/login', (req, res) =>
 
 //Register Page
 router.get('/staff/only/register', (req, res) =>
-  res.render('register', { title: 'User Register' })
+  res.render('/staff/only/register', { title: 'User Register' })
 );
 
 //Register handel
