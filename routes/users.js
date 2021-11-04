@@ -88,7 +88,7 @@ router.post('/register', (req, res) => {
                 req.flash('success_msg', 'A confirmation code has been sent');
                 res.redirect('/users/confirmation');
                 return transporter.sendMail({
-                  from: 'api.botlist.app',
+                  from: 'infinitybots@outlook.com',
                   to: user.email,
                   subject: 'Confirm Verification || Blog App || Fusobotics',
                   text: `Account Verification Code: ${confirmCode}`,
@@ -165,7 +165,7 @@ router.post('/reset', (req, res) => {
       .then((result) => {
         res.redirect('/');
         transporter.sendMail({
-          from: 'sagarkarki34@outlook.com',
+          from: 'infinitybots@outlook.com',
           to: req.body.email,
           subject: 'Password reset',
           text: `Please Click the link below to reset your password \n http://${req.headers.host}/users/reset/${token}`,
