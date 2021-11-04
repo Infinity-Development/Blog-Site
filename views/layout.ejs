@@ -85,7 +85,7 @@
               <a class="nav-item nav-link" href="/users/login">Login</a>
               <% } else{%>
               <a class="nav-item nav-link" href="/articles/user/profile/<%= currentUser.name %>">
-                 <i class="fas fa-user-circle mr-1"></i><%= currentUser.name.charAt(0) %>
+                 <i class="fas fa-user-circle mr-1"></i>Welcome, <%= currentUser.name %>
               </a>
               <a class="nav-item nav-link" href="/articles/new">New Blog</a>
               <a href="/users/logout" class="btn btn-secondary ml-auto"
