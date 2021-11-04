@@ -77,7 +77,6 @@
             <div class="navbar-nav second ml-auto">
               <% if (!currentUser) {%>
               <a class="nav-item nav-link" href="/users/login">Login</a>
-              <a class="nav-item nav-link" href="/users/register">Sign Up</a>
               <% } else{%>
               <div class="user-icon mr-3 nav-item">
                 <a href="/articles/user/profile/<%= currentUser.name %> "
