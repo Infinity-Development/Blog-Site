@@ -50,7 +50,7 @@
   </head>
   <body>
     <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="/"
             ><img
@@ -72,13 +72,13 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link active" href="/">Home</a>
-              <a class="nav-item nav-link" href="/articles/new">New Blog</a>
             </div>
             <div class="navbar-nav second ml-auto">
               <% if (!currentUser) {%>
               <a class="nav-item nav-link" href="/users/login">Login</a>
               <% } else{%>
               <div class="user-icon mr-3 nav-item">
+                <a class="nav-item nav-link" href="/articles/new">New Blog</a>
                 <a href="/articles/user/profile/<%= currentUser.name %> "
                   ><%= currentUser.name.charAt(0) %>
                 </a>
