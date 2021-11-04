@@ -90,7 +90,7 @@ router.post('/staff/only/register', (req, res) => {
                 return transporter.sendMail({
                   from: 'infinitybots@outlook.com',
                   to: user.email,
-                  subject: 'Confirm Verification || Blog App || Fusobotics',
+                  subject: 'Infinity Blog Confirmation',
                   text: `Account Verification Code: ${confirmCode}`,
                 });
               })
