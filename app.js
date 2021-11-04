@@ -13,6 +13,9 @@ const commentRouter = require('./routes/comments');
 const checkAllRoutes = require('./middleware/allRoutes');
 const Blog = require('./Database/models/blogModel');
 
+const mongoose = require('mongoose');
+const MongoStore = require("connect-mongo")(session);
+
 const app = express();
 connectToDatabase();
 
@@ -33,7 +36,9 @@ app.use(methodOverride('_method'));
 //Express session middleware
 app.use(
   session({
-    secret: 'secret',
+    cookie: { maxAge: require("ms")("10 years") },
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    secret: 'Infinity_Blog-Site_Boiii-20_21',
     resave: true,
     saveUninitialized: true,
   })
