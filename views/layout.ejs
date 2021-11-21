@@ -86,7 +86,7 @@
             <div class="navbar-nav second ml-auto">
               <% if (!currentUser) {%>
               <a class="nav-item nav-link" href="/users/login">Login</a>
-              <% } else{%>
+              <% } else { %>
               <a class="nav-item nav-link" href="/articles/user/profile/<%= currentUser.name %>">
                  <i class="fas fa-user-circle mr-1"></i>Welcome, <%= currentUser.name %>
               </a>
