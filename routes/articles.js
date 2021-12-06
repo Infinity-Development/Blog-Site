@@ -11,6 +11,14 @@ router.use((req, res, next) => {
 });
 
 router.get('/new', ensureAuthenticated, (req, res) => {
+  
+  if (req.user) {
+    let userCheck = await User.findOne({ email: req.user.email })
+
+    if (!userCheck.isIBLStaff) return res.redirect('/');
+  }
+
+
   res.render('articles/new', { article: new Blog(), title: 'New Blog Post' });
 });
 
