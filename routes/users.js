@@ -68,6 +68,7 @@ router.post('/staff/only/register', (req, res) => {
           name: name,
           email: email,
           password: password,
+          isIBLStaff: false,
           blog: [],
         });
         console.log(newUser);
