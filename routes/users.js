@@ -20,12 +20,12 @@ router.get('/login', (req, res) =>
 );
 
 //Register Page
-router.get('/staff/only/register', (req, res) =>
+router.get('/register', (req, res) =>
   res.render('register', { title: 'User Register' })
 );
 
 //Register handel
-router.post('/staff/only/register', (req, res) => {
+router.post('/register', (req, res) => {
   const { name, email, password, password2 } = req.body;
   let errors = [];
 
