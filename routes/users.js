@@ -36,8 +36,8 @@ router.post('/register', (req, res) => {
 
   //check passwords match
   if (password !== password2) {
-    //errors.push({ msg: 'Passwords do not match' });
-    req.flash('error_msg', 'Woah, your passwords do not match!');
+    errors.push({ msg: 'Passwords do not match' });
+    //req.flash('error_msg', 'Woah, your passwords do not match!');
   }
 
   //check pass length
@@ -57,8 +57,8 @@ router.post('/register', (req, res) => {
     User.findOne({ email: email }).then((user) => {
       if (user) {
         //User exists
-        //errors.push({ msg: 'Email Already Exists!' });
-        req.flash('error_msg', 'That Email is already registered with us!');
+        errors.push({ msg: 'Email Already Exists!' });
+        //req.flash('error_msg', 'That Email is already registered with us!');
         res.render('register', {
           errors,
           name,
