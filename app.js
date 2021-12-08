@@ -87,10 +87,12 @@ app.get('/articles/user/profile/:name', async (req, res) => {
 app.use('/users', checkAllRoutes, require('./routes/users'));
 
 app.use(function (req, res, next) {
+  res.locals.currentUser = req.user || null;
   res.render('404', { title: 'Page Not Found' });
 });
 
 app.use(async function (error, req, res, next) {
+  res.locals.currentUser = req.user || null;
   res.render('500', { title: 'Internal Server Error' });             
   return console.log(`Error: ${error.stack} | Route: ${req.path}`)
 });
