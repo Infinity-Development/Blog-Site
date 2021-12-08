@@ -36,7 +36,8 @@ router.post('/register', (req, res) => {
 
   //check passwords match
   if (password !== password2) {
-    errors.push({ msg: 'Passwords do not match' });
+    //errors.push({ msg: 'Passwords do not match' });
+    req.flash('error_msg', 'Woah, your passwords do not match!');
   }
 
   //check pass length
