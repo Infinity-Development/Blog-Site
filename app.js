@@ -86,9 +86,13 @@ app.get('/articles/user/profile/:name', async (req, res) => {
 
 app.use('/users', checkAllRoutes, require('./routes/users'));
 
-//404 page
-app.get('*', (req, res) => {
+router.use(function (req, res, next) {
   res.render('404', { title: 'Page Not Found' });
+});
+
+router.use(async function (error, req, res, next) {
+  res.render('500', { title: 'Internal Server Error' });             
+  return console.log(`Error: ${error.stack} | Route: ${req.path}`)
 });
 
 const PORT = process.env.PORT || 3000;
