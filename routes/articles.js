@@ -10,7 +10,7 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/new', ensureAuthenticated, (req, res) => {
+router.get('/new', ensureAuthenticated, async (req, res) => {
   
   if (req.user) {
     let userCheck = await User.findOne({ email: req.user.email })
