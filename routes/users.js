@@ -9,8 +9,8 @@ const { ensureAuthenticated } = require('../config/auth');
 const transporter = nodemailer.createTransport({
   service: 'outlook',
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS,
+    user: "infinitybots@outlook.com",
+    pass: "Patience_2013",
   },
 });
 
