@@ -97,7 +97,7 @@ app.use(async function (error, req, res, next) {
   return console.log(`Error: ${error.stack} | Route: ${req.path}`)
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = 4209;
 app.listen(PORT, () => {
-  console.log('Server listening on port 3000');
+  console.log('Server listening on port 4209');
 });
