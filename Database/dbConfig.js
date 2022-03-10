@@ -5,7 +5,7 @@ dotenv.config();
 const connectToDatabase = () => {
   try {
     mongoose.connect(
-      process.env.DB_URI,
+      "mongodb://mongo:aNX8nhE6UV6f8CImP3fZ@containers-us-west-7.railway.app:5635",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
